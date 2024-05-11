@@ -1,0 +1,21 @@
+
+Ê
+java:S1186Á"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¼ Òþüÿÿÿÿ8õµí´ö1J$45ad79d3-3529-415b-a00e-232b62b699f1
+Å
+java:S1186Æ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(™àíŸ8õµí´ö1J$f2d7e230-2364-4280-ad1b-5b3922735ff7
+£
+java:S1450"[Remove the "addressLabel" field and declare it as a local variable in the relevant methods.(ÿ¨­‡ùÿÿÿÿ8ØÐð´ö1J$745b549d-d35f-42b5-b64b-4fe69eb3536a
+š
+java:S1450"WRemove the "ageLabel" field and declare it as a local variable in the relevant methods.(€ËŒÒ8ÚÐð´ö1J$eb783b8a-5a3b-41a6-9e5b-4846e63d39ff
+Ÿ
+java:S1450"WRemove the "gpaLabel" field and declare it as a local variable in the relevant methods.(Ì„µ•ÿÿÿÿÿ8ßÐð´ö1J$37fb1076-e2a2-424e-bd48-0a5487aebe17
+™
+java:S1450"VRemove the "idLabel" field and declare it as a local variable in the relevant methods.(÷½³±8ßÐð´ö1J$9e8aedfa-7365-4e72-8266-1c547f6d48b3
+©
+java:S1450"aRemove the "jScrollPaneAddress" field and declare it as a local variable in the relevant methods.(¡­ò´üÿÿÿÿ8àÐð´ö1J$adfb7908-f379-499e-aeff-3aabe17ccda3
+©
+java:S1450"fRemove the "jScrollPaneStudentTable" field and declare it as a local variable in the relevant methods.(ú²‹Í8âÐð´ö1J$589c1725-e15c-4a97-932a-980e1cbaa42a
+ 
+java:S1450"XRemove the "nameLabel" field and declare it as a local variable in the relevant methods.(ü‡†æüÿÿÿÿ8ãÐð´ö1J$125be895-a355-41a4-8e8a-1eb196a8f11a
+i
+java:S1948*"&Make "data" transient or serializable.(ÿºÝÜ8•²î´ö1J$7fc41de0-dbec-4367-a512-0230551a54fa

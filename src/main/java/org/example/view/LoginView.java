@@ -60,6 +60,7 @@ public class LoginView  extends JFrame implements ActionListener {
         this.setTitle("Login");
         this.setSize(400, 300);
         this.setResizable(false);
+        this.setLocationRelativeTo(null);
     }
     public void showMessage(String message) {
         JOptionPane.showMessageDialog(this, message);

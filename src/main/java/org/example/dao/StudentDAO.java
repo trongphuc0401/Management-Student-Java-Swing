@@ -77,6 +77,9 @@ public class StudentDAO {
                 listStudents.get(i).setAge(student.getAge());
                 listStudents.get(i).setAddress(student.getAddress());
                 listStudents.get(i).setGpa(student.getGpa());
+                listStudents.get(i).setMajor(student.getMajor());
+                listStudents.get(i).setHobbies(student.getHobbies());
+                listStudents.get(i).setSport(student.getSport());
                 writeListStudents(listStudents);
                 break;
             }

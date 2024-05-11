@@ -27,7 +27,6 @@ public class LoginController {
         public void actionPerformed(ActionEvent e) {
             User user = loginView.getUser();
             if (userDao.checkUser(user)) {
-                // nếu đăng nhập thành công, mở màn hình quản lý sinh viên
                 studentView = new StudentView();
                 StudentController studentController = new StudentController(studentView);
                 studentController.showStudentView();

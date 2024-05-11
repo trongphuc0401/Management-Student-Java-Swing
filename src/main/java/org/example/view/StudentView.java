@@ -111,12 +111,14 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         jScrollPaneStudentTable.setViewportView(studentTable);
         jScrollPaneStudentTable.setPreferredSize(new Dimension(680, 300));
 
+
         // tạo spring layout
         SpringLayout layout = new SpringLayout();
         // tạo đối tượng panel để chứa các thành phần của màn hình quản lý Student
         JPanel panel = new JPanel();
         panel.setSize(800, 420);
         panel.setLayout(layout);
+
         panel.add(jScrollPaneStudentTable);
 
         panel.add(addStudentBtn);
@@ -217,6 +219,7 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         this.pack();
         this.setTitle("Student Registration");
         this.setSize(1000, 620);
+        this.setLocationRelativeTo(null);
         // disable Edit and Delete buttons
         editStudentBtn.setEnabled(false);
         deleteStudentBtn.setEnabled(false);
@@ -255,10 +258,7 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         studentTable.setModel(new DefaultTableModel(students, columnNames));
     }
 
-    /**
-     * điền thông tin của hàng được chọn từ bảng student
-     * vào các trường tương ứng của student.
-     */
+
     public void fillStudentFromSelectedRow() {
         // lấy chỉ số của hàng được chọn
         int row = studentTable.getSelectedRow();
@@ -317,9 +317,9 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         ageField.setText("" + student.getAge());
         addressTA.setText(student.getAddress());
         gpaField.setText("" + student.getGpa());
-        specializationField.setText("" + student.getGpa());
-        hobbiesField.setText("" + student.getGpa());
-        sportsField.setText("" + student.getGpa());
+        specializationField.setText("" + student.getMajor());
+        hobbiesField.setText("" + student.getHobbies());
+        sportsField.setText("" + student.getSport());
         // enable Edit and Delete buttons
         editStudentBtn.setEnabled(true);
         deleteStudentBtn.setEnabled(true);

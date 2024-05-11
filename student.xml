@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <students>
-
     <student>
         <id>10</id>
         <FirName>Nguyen</FirName>
@@ -12,5 +11,17 @@
         <major>CNTT</major>
         <hobbies>Anime</hobbies>
         <sport>Da Banh</sport>
+    </student>
+    <student>
+        <id>2</id>
+        <FirName>Huong</FirName>
+        <LastName>Nguyen</LastName>
+        <contact>huong0401@gmail.com</contact>
+        <age>19</age>
+        <address>Quan 12</address>
+        <gpa>3.7</gpa>
+        <major>CNTT</major>
+        <hobbies>nau an</hobbies>
+        <sport>Da banh</sport>
     </student>
 </students>

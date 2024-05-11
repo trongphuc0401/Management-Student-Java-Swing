@@ -1,33 +1,33 @@
 
 Ê
-java:S1186Í"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¼ Òþüÿÿÿÿ8‚Æ‰¸ö1J$5f8b2e16-0209-491c-b4d1-ad2982de179b
+java:S1186Í"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¼ Òþüÿÿÿÿ8‚Æ‰¸ö1J$ea1f7cb3-43d2-43d4-8a49-8c02a92cfdd9
 Å
-java:S1186Ò"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(™àíŸ8ƒÆ‰¸ö1J$051f56c4-753c-48e8-ab34-5bf98e245464
+java:S1186Ò"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(™àíŸ8ƒÆ‰¸ö1J$1bfd9a37-fe83-46ac-b181-94a82f9faa4d
 £
-java:S1450""[Remove the "addressLabel" field and declare it as a local variable in the relevant methods.(ÿ¨­‡ùÿÿÿÿ8†Æ‰¸ö1J$c451db93-5906-4c56-a849-d7dfa746c6e6
+java:S1450""[Remove the "addressLabel" field and declare it as a local variable in the relevant methods.(ÿ¨­‡ùÿÿÿÿ8†Æ‰¸ö1J$b6222987-251d-4ff7-b6d5-25ab2c8dc179
 š
-java:S1450!"WRemove the "ageLabel" field and declare it as a local variable in the relevant methods.(€ËŒÒ8†Æ‰¸ö1J$405710bb-15b1-42b9-bd25-14eaac5e8e51
+java:S1450!"WRemove the "ageLabel" field and declare it as a local variable in the relevant methods.(€ËŒÒ8†Æ‰¸ö1J$ef5e22c1-bf56-4800-8e1b-dc136d707db8
 ž
-java:S1450 "[Remove the "contactLabel" field and declare it as a local variable in the relevant methods.(æºÝý8‡Æ‰¸ö1J$89646d55-d3fe-4d73-9e45-b092c22b2a50
+java:S1450 "[Remove the "contactLabel" field and declare it as a local variable in the relevant methods.(æºÝý8‡Æ‰¸ö1J$4f817506-3a6c-4ef5-b18c-749e99c851e2
 ™
-java:S1450"VRemove the "exitBtn" field and declare it as a local variable in the relevant methods.(¸þ‘­8‡Æ‰¸ö1J$8d80478e-a146-4d0e-ab84-2d9f89724e8c
+java:S1450"VRemove the "exitBtn" field and declare it as a local variable in the relevant methods.(¸þ‘­8‡Æ‰¸ö1J$27d24261-2bc2-4a1d-943a-fdf66712e56c
 ¥
-java:S1450"]Remove the "firstNameLabel" field and declare it as a local variable in the relevant methods.(ö¡Ù‰ùÿÿÿÿ8‡Æ‰¸ö1J$0481544d-e139-4a8d-9834-74ffccafe691
+java:S1450"]Remove the "firstNameLabel" field and declare it as a local variable in the relevant methods.(ö¡Ù‰ùÿÿÿÿ8‡Æ‰¸ö1J$62df4cb1-3383-4ff8-9038-459bc64289e0
 Ÿ
-java:S1450#"WRemove the "gpaLabel" field and declare it as a local variable in the relevant methods.(Ì„µ•ÿÿÿÿÿ8‡Æ‰¸ö1J$d2cb1f6e-0019-4102-9ee2-2cfc7a4c260e
+java:S1450#"WRemove the "gpaLabel" field and declare it as a local variable in the relevant methods.(Ì„µ•ÿÿÿÿÿ8‡Æ‰¸ö1J$65adbf4f-6896-47df-9601-5c25405727e8
 ž
-java:S1450'"[Remove the "hobbiesLabel" field and declare it as a local variable in the relevant methods.(Û£Ñê8‡Æ‰¸ö1J$24f644e4-74ef-4f43-bfc7-ce1b04435571
+java:S1450'"[Remove the "hobbiesLabel" field and declare it as a local variable in the relevant methods.(Û£Ñê8‡Æ‰¸ö1J$77c3efa5-ce92-405a-943c-15f432ad7818
 ™
-java:S1450"VRemove the "idLabel" field and declare it as a local variable in the relevant methods.(÷½³±8‡Æ‰¸ö1J$447f537a-bb98-4d51-82d3-d5a9ea4c8f97
+java:S1450"VRemove the "idLabel" field and declare it as a local variable in the relevant methods.(÷½³±8‡Æ‰¸ö1J$832cd1b5-3fac-47ca-bca8-a099522d9969
 ©
-java:S1450"aRemove the "jScrollPaneAddress" field and declare it as a local variable in the relevant methods.(¡­ò´üÿÿÿÿ8ˆÆ‰¸ö1J$dd91977c-39a3-48ab-b7d5-016155e8643b
+java:S1450"aRemove the "jScrollPaneAddress" field and declare it as a local variable in the relevant methods.(¡­ò´üÿÿÿÿ8ˆÆ‰¸ö1J$56c54ad1-202e-42be-956e-742685f05425
 ©
-java:S1450"fRemove the "jScrollPaneStudentTable" field and declare it as a local variable in the relevant methods.(ú²‹Í8ˆÆ‰¸ö1J$23c248e5-7287-4bf5-9a73-1b4dd71ab0f2
+java:S1450"fRemove the "jScrollPaneStudentTable" field and declare it as a local variable in the relevant methods.(ú²‹Í8ˆÆ‰¸ö1J$7ff884fb-8fe8-4539-9eb6-014c86e35920
 ž
-java:S1450"\Remove the "lastNameLabel" field and declare it as a local variable in the relevant methods.(…Ó½X8ˆÆ‰¸ö1J$f3464d39-e549-47ac-8c59-337ece990771
+java:S1450"\Remove the "lastNameLabel" field and declare it as a local variable in the relevant methods.(…Ó½X8ˆÆ‰¸ö1J$78ccbd7b-e648-470d-a836-e91b73b02261
 ª
-java:S1450%"bRemove the "specializationLabel" field and declare it as a local variable in the relevant methods.(€ø­“üÿÿÿÿ8ˆÆ‰¸ö1J$f95846b7-49d8-4fc4-98a1-b008123c851b
+java:S1450%"bRemove the "specializationLabel" field and declare it as a local variable in the relevant methods.(€ø­“üÿÿÿÿ8ˆÆ‰¸ö1J$9be4aa05-2edd-4674-b225-2bb88d77f677
 ¢
-java:S1450)"ZRemove the "sportsLabel" field and declare it as a local variable in the relevant methods.(ƒ’ÌÆÿÿÿÿÿ8ˆÆ‰¸ö1J$e4b09957-9c91-4d52-9f61-b6672ffbf75e
+java:S1450)"ZRemove the "sportsLabel" field and declare it as a local variable in the relevant methods.(ƒ’ÌÆÿÿÿÿÿ8ˆÆ‰¸ö1J$8cd4fa68-0b88-40d4-a261-b3e05e5de8ed
 i
-java:S1948:"&Make "data" transient or serializable.(ÿºÝÜ8‰Æ‰¸ö1J$596c52d5-2955-4f2d-9818-4d8d04e035c3
+java:S1948:"&Make "data" transient or serializable.(ÿºÝÜ8‰Æ‰¸ö1J$82e2acc4-e70c-4804-8ac2-79546fc8d5c3

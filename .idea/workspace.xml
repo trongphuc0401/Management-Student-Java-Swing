@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84be231d-3388-4cb1-8e56-722cf1698f2c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/1776f7636d5efc84da1d29711989f49b294c2afb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/1776f7636d5efc84da1d29711989f49b294c2afb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/550c7feb6954c0f375df6bae9418adf7b5e2d691" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/550c7feb6954c0f375df6bae9418adf7b5e2d691" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/6767bdf0d3708e370df38c14ae89f585ac447b8f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/6767bdf0d3708e370df38c14ae89f585ac447b8f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b46ab876141cb2210a5ccb30d2e51120d8cdcb49" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b46ab876141cb2210a5ccb30d2e51120d8cdcb49" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/StudentDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/view/StudentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/view/StudentView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student.xml" beforeDir="false" afterPath="$PROJECT_DIR$/student.xml" afterDir="false" />

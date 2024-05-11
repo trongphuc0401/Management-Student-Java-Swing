@@ -24,7 +24,7 @@ public class Student implements Serializable {
 
     private float gpa; /// Hghest Qualification
 
-    private MajorType major;
+    private String major;
 
     private String hobbies;
 
@@ -32,10 +32,10 @@ public class Student implements Serializable {
     public Student() {
     }
 
-    public Student(int id, String firName, String lastName, String contact, byte age, String address, float gpa, MajorType major, String hobbies, String sport) {
+    public Student(int id, String firName, String lastName, String contact, byte age, String address, float gpa, String major, String hobbies, String sport) {
         this.id = id;
-        FirName = firName;
-        LastName = lastName;
+        this.FirName = firName;
+        this.LastName = lastName;
         this.contact = contact;
         this.age = age;
         this.address = address;
@@ -101,11 +101,11 @@ public class Student implements Serializable {
         this.gpa = gpa;
     }
 
-    public MajorType getMajor() {
+    public String getMajor() {
         return major;
     }
 
-    public void setMajor(MajorType major) {
+    public void setMajor(String major) {
         this.major = major;
     }
 

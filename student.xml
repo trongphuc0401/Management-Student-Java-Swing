@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <students>
+
     <student>
-        <id>1</id>
-        <age>12</age>
-        <address>Gò Vấp</address>
-        <gpa>3.6</gpa>
-    </student>
-    <student>
-        <id>2</id>
-        <age>16</age>
-        <address>Quận 12</address>
-        <gpa>3.7</gpa>
-    </student>
-    <student>
-        <id>3</id>
-        <age>15</age>
-        <address>Quận 12</address>
-        <gpa>3.8</gpa>
-    </student>
-    <student>
-        <id>4</id>
+        <id>10</id>
         <FirName>Nguyen</FirName>
-        <contact>Phuc</contact>
-        <age>12</age>
-        <address>Go Vap</address>
+        <LastName>Phuc</LastName>
+        <contact>phucsk098@gmail.com</contact>
+        <age>21</age>
+        <address>Go vap</address>
         <gpa>3.6</gpa>
+        <major>CNTT</major>
+        <hobbies>Anime</hobbies>
+        <sport>Da Banh</sport>
     </student>
 </students>

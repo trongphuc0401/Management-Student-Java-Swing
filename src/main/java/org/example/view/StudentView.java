@@ -109,7 +109,7 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         // cài đặt các cột và data cho bảng student
         studentTable.setModel(new DefaultTableModel((Object[][]) data, columnNames));
         jScrollPaneStudentTable.setViewportView(studentTable);
-        jScrollPaneStudentTable.setPreferredSize(new Dimension(480, 300));
+        jScrollPaneStudentTable.setPreferredSize(new Dimension(680, 300));
 
         // tạo spring layout
         SpringLayout layout = new SpringLayout();
@@ -239,15 +239,18 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         // khởi tạo mảng 2 chiều students, trong đó:
         // số hàng: là kích thước của list student
         // số cột: là 5
-        Object [][] students = new Object[size][5];
+        Object [][] students = new Object[size][10];
         for (int i = 0; i < size; i++) {
             students[i][0] = list.get(i).getId();
             students[i][1] = list.get(i).getFirName();
             students[i][2] = list.get(i).getLastName();
-            students[i][3] = list.get(i).getContact();
-            students[i][4] = list.get(i).getAge();
+            students[i][3] = list.get(i).getAge();
+            students[i][4] = list.get(i).getContact();
             students[i][5] = list.get(i).getAddress();
             students[i][6] = list.get(i).getGpa();
+            students[i][7] = list.get(i).getMajor();
+            students[i][8] = list.get(i).getHobbies();
+            students[i][9] = list.get(i).getSport();
         }
         studentTable.setModel(new DefaultTableModel(students, columnNames));
     }
@@ -267,6 +270,9 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
             ageField.setText(studentTable.getModel().getValueAt(row, 4).toString());
             addressTA.setText(studentTable.getModel().getValueAt(row, 5).toString());
             gpaField.setText(studentTable.getModel().getValueAt(row, 6).toString());
+            specializationField.setText(studentTable.getModel().getValueAt(row, 7).toString());
+            hobbiesField.setText(studentTable.getModel().getValueAt(row, 8).toString());
+            sportsField.setText(studentTable.getModel().getValueAt(row, 9).toString());
             // enable Edit and Delete buttons
             editStudentBtn.setEnabled(true);
             deleteStudentBtn.setEnabled(true);
@@ -286,6 +292,10 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         ageField.setText("");
         addressTA.setText("");
         gpaField.setText("");
+        specializationField.setText("");
+        hobbiesField.setText("");
+        sportsField.setText("");
+
         // disable Edit and Delete buttons
         editStudentBtn.setEnabled(false);
         deleteStudentBtn.setEnabled(false);
@@ -307,6 +317,9 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         ageField.setText("" + student.getAge());
         addressTA.setText(student.getAddress());
         gpaField.setText("" + student.getGpa());
+        specializationField.setText("" + student.getGpa());
+        hobbiesField.setText("" + student.getGpa());
+        sportsField.setText("" + student.getGpa());
         // enable Edit and Delete buttons
         editStudentBtn.setEnabled(true);
         deleteStudentBtn.setEnabled(true);
@@ -321,7 +334,7 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
      */
     public Student getStudentInfo() {
         // validate student
-        if (!validateFirstName()||!validateLastName()||!validateContact() || !validateAge() || !validateAddress() || !validateGPA()) {
+        if (!validateFirstName()||!validateLastName()||!validateContact() || !validateAge() || !validateAddress() || !validateGPA() || !validateMajor() ||!validateHobbies()||!validateSport()) {
             return null;
         }
         try {
@@ -330,11 +343,14 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
                 student.setId(Integer.parseInt(idField.getText()));
             }
             student.setFirName(firstNameField.getText().trim());
-            student.setFirName(lastNameField.getText().trim());
+            student.setLastName(lastNameField.getText().trim());
             student.setContact(contactField.getText().trim());
             student.setAge(Byte.parseByte(ageField.getText().trim()));
             student.setAddress(addressTA.getText().trim());
             student.setGpa(Float.parseFloat(gpaField.getText().trim()));
+            student.setMajor(specializationField.getText().trim());
+            student.setHobbies(hobbiesField.getText().trim());
+            student.setSport(sportsField.getText().trim());
             return student;
         } catch (Exception e) {
             showMessage(e.getMessage());
@@ -409,6 +425,34 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         } catch (Exception e) {
             gpaField.requestFocus();
             showMessage("GPA không hợp lệ!");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateMajor() {
+        String name = specializationField.getText();
+        if (name == null || "".equals(name.trim())) {
+            specializationField.requestFocus();
+            showMessage("Specialization không được trống.");
+            return false;
+        }
+        return true;
+    }
+    private boolean validateHobbies() {
+        String name = hobbiesField.getText();
+        if (name == null || "".equals(name.trim())) {
+            hobbiesField.requestFocus();
+            showMessage("Hobbies không được trống.");
+            return false;
+        }
+        return true;
+    }
+    private boolean validateSport() {
+        String name = sportsField.getText();
+        if (name == null || "".equals(name.trim())) {
+            sportsField.requestFocus();
+            showMessage("Sport không được trống.");
             return false;
         }
         return true;

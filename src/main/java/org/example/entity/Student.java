@@ -1,5 +1,7 @@
 package org.example.entity;
 
+import org.example.utils.enums.MajorType;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -11,21 +13,36 @@ import java.io.Serializable;
 public class Student implements Serializable {
     private static final long serialVersionUID = 1L;
     private int id;
-    private String name;
+    private String FirName;
+
+    private String LastName;
+
+    private String contact;
     private byte age;
     private String address;
-    /* điểm trung bình của sinh viên */
-    private float gpa;
+
+
+    private float gpa; /// Hghest Qualification
+
+    private MajorType major;
+
+    private String hobbies;
+
+    private String sport;
     public Student() {
     }
 
-    public Student(int id, String name, byte age, String address, float gpa) {
-        super();
+    public Student(int id, String firName, String lastName, String contact, byte age, String address, float gpa, MajorType major, String hobbies, String sport) {
         this.id = id;
-        this.name = name;
+        FirName = firName;
+        LastName = lastName;
+        this.contact = contact;
         this.age = age;
         this.address = address;
         this.gpa = gpa;
+        this.major = major;
+        this.hobbies = hobbies;
+        this.sport = sport;
     }
 
     public int getId() {
@@ -36,12 +53,28 @@ public class Student implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirName() {
+        return FirName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirName(String firName) {
+        FirName = firName;
+    }
+
+    public String getLastName() {
+        return LastName;
+    }
+
+    public void setLastName(String lastName) {
+        LastName = lastName;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
     public byte getAge() {
@@ -66,5 +99,29 @@ public class Student implements Serializable {
 
     public void setGpa(float gpa) {
         this.gpa = gpa;
+    }
+
+    public MajorType getMajor() {
+        return major;
+    }
+
+    public void setMajor(MajorType major) {
+        this.major = major;
+    }
+
+    public String getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(String hobbies) {
+        this.hobbies = hobbies;
+    }
+
+    public String getSport() {
+        return sport;
+    }
+
+    public void setSport(String sport) {
+        this.sport = sport;
     }
 }

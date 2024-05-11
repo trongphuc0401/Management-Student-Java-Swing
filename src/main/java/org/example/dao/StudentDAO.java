@@ -71,7 +71,9 @@ public class StudentDAO {
         int size = listStudents.size();
         for (int i = 0; i < size; i++) {
             if (listStudents.get(i).getId() == student.getId()) {
-                listStudents.get(i).setName(student.getName());
+                listStudents.get(i).setFirName(student.getFirName());
+                listStudents.get(i).setLastName(student.getLastName());
+                listStudents.get(i).setContact(student.getContact());
                 listStudents.get(i).setAge(student.getAge());
                 listStudents.get(i).setAddress(student.getAddress());
                 listStudents.get(i).setGpa(student.getGpa());
@@ -110,7 +112,7 @@ public class StudentDAO {
     public void sortStudentByName() {
         Collections.sort(listStudents, new Comparator<Student>() {
             public int compare(Student student1, Student student2) {
-                return student1.getName().compareTo(student2.getName());
+                return student1.getLastName().compareTo(student2.getLastName());
             }
         });
     }

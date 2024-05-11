@@ -1,8 +1,7 @@
 
-£
-java:S1186U"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¼ Òþüÿÿÿÿ8â€­´ö1
-~
-java:S1450"\Remove the "passwordlabel" field and declare it as a local variable in the relevant methods.(‰”¸ïýÿÿÿÿ8æ€­´ö1
-y
-java:S1450"\Remove the "userNameLabel" field and declare it as a local variable in the relevant methods.(«†á«8ç€­´ö1
-]	java:S125F"<This block of commented-out lines of code should be removed.(¦Çèïÿÿÿÿÿ8­´ö1
+É
+java:S1186S"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¼ Òþüÿÿÿÿ8â€­´ö1J$2182b9a5-ab5a-4b4a-b870-e8f90693e0dd
+¤
+java:S1450"\Remove the "passwordlabel" field and declare it as a local variable in the relevant methods.(‰”¸ïýÿÿÿÿ8æ€­´ö1J$78e63621-8a08-4b7d-afa7-9424daee23eb
+Ÿ
+java:S1450"\Remove the "userNameLabel" field and declare it as a local variable in the relevant methods.(«†á«8ç€­´ö1J$b586e71d-3d73-479f-b636-2adba869d908

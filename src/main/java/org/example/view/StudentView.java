@@ -17,6 +17,8 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
     private JButton editStudentBtn;
     private JButton deleteStudentBtn;
     private JButton clearBtn;
+
+    private JButton exitBtn;
     private JButton sortStudentGPABtn;
     private JButton sortStudentNameBtn;
     private JScrollPane jScrollPaneStudentTable;
@@ -24,21 +26,35 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
     private JTable studentTable;
 
     private JLabel idLabel;
-    private JLabel nameLabel;
+    private JLabel firstNameLabel;
+
+    private JLabel lastNameLabel;
+    private JLabel contactLabel;
     private JLabel ageLabel;
     private JLabel addressLabel;
     private JLabel gpaLabel;
 
+    private JLabel specializationLabel;
+
+    private JLabel hobbiesLabel;
+
+    private JLabel sportsLabel;
+
     private JTextField idField;
-    private JTextField nameField;
+    private JTextField firstNameField;
+    private JTextField lastNameField;
+    private JTextField contactField;
     private JTextField ageField;
     private JTextArea addressTA;
     private JTextField gpaField;
+    private JTextField specializationField;
+    private JTextField hobbiesField;
+    private JTextField sportsField;
 
 
     private String [] columnNames = new String [] {
-            "ID", "Name", "Age", "Address", "GPA"};
-    // định nghĩa dữ liệu mặc định của bẳng student là rỗng
+            "ID", "First Name","Last Name", "Age","Contact","Address", "GPA","Specialization","Hobbies","Sports"};
+
     private Object data = new Object [][] {};
     public StudentView() {
         initComponents();
@@ -46,10 +62,11 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
     private void initComponents() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         // khởi tạo các phím chức năng
-        addStudentBtn = new JButton("Add");
+        addStudentBtn = new JButton("Save");
         editStudentBtn = new JButton("Edit");
         deleteStudentBtn = new JButton("Delete");
-        clearBtn = new JButton("Clear");
+        clearBtn = new JButton("Reset");
+        exitBtn = new JButton("Exit");
         sortStudentGPABtn = new JButton("Sort By GPA");
         sortStudentNameBtn = new JButton("Sort By Name");
         // khởi tạo bảng student
@@ -58,23 +75,37 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
 
         // khởi tạo các label
         idLabel = new JLabel("Id");
-        nameLabel = new JLabel("Name");
-        ageLabel = new JLabel("Age");
-        addressLabel = new JLabel("Address");
-        gpaLabel = new JLabel("GPA");
+        firstNameLabel = new JLabel("First Name: ");
+        lastNameLabel = new JLabel("Last Name: ");
+        ageLabel = new JLabel("Age: ");
+        contactLabel = new JLabel("Contact: ");
+        addressLabel = new JLabel("Address: ");
+        gpaLabel = new JLabel("GPA: ");
+        specializationLabel = new JLabel("Specialization: ");
+        hobbiesLabel = new JLabel("Hobbies: ");
+        sportsLabel = new JLabel("Sport: ");
 
         // khởi tạo các trường nhập dữ liệu cho student
         idField = new JTextField(6);
         idField.setEditable(false);
-        nameField = new JTextField(15);
+        firstNameField = new JTextField(15);
+        lastNameField = new JTextField(15);
+        contactField = new JTextField(15);
         ageField = new JTextField(6);
+
+
         addressTA = new JTextArea();
         addressTA.setColumns(15);
         addressTA.setRows(5);
         jScrollPaneAddress = new JScrollPane();
         jScrollPaneAddress.setViewportView(addressTA);
+
+
         gpaField = new JTextField(6);
 
+        specializationField = new JTextField(15);
+        hobbiesField = new JTextField(15);
+        sportsField = new JTextField(15);
         // cài đặt các cột và data cho bảng student
         studentTable.setModel(new DefaultTableModel((Object[][]) data, columnNames));
         jScrollPaneStudentTable.setViewportView(studentTable);
@@ -92,66 +123,100 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         panel.add(editStudentBtn);
         panel.add(deleteStudentBtn);
         panel.add(clearBtn);
+        panel.add(exitBtn);
         panel.add(sortStudentGPABtn);
         panel.add(sortStudentNameBtn);
 
         panel.add(idLabel);
-        panel.add(nameLabel);
+        panel.add(firstNameLabel);
+        panel.add(lastNameLabel);
+        panel.add(contactLabel);
+
         panel.add(ageLabel);
         panel.add(addressLabel);
         panel.add(gpaLabel);
 
+        panel.add(specializationLabel);
+        panel.add(hobbiesLabel);
+        panel.add(sportsLabel);
+
         panel.add(idField);
-        panel.add(nameField);
+        panel.add(firstNameField);
+        panel.add(lastNameField);
+        panel.add(contactField);
         panel.add(ageField);
         panel.add(jScrollPaneAddress);
         panel.add(gpaField);
+        panel.add(specializationField);
+        panel.add(hobbiesField);
+        panel.add(sportsField);
 
         // cài đặt vị trí các thành phần trên màn hình login
         layout.putConstraint(SpringLayout.WEST, idLabel, 10, SpringLayout.WEST, panel);
         layout.putConstraint(SpringLayout.NORTH, idLabel, 10, SpringLayout.NORTH, panel);
-        layout.putConstraint(SpringLayout.WEST, nameLabel, 10, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, nameLabel, 40, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, firstNameLabel, 10, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, firstNameLabel, 40, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, lastNameLabel, 10, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, lastNameLabel, 70, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, contactLabel, 10, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, contactLabel, 100, SpringLayout.NORTH, panel);
         layout.putConstraint(SpringLayout.WEST, ageLabel, 10, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, ageLabel, 70, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.NORTH, ageLabel, 130, SpringLayout.NORTH, panel);
         layout.putConstraint(SpringLayout.WEST, addressLabel, 10, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, addressLabel, 100, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.NORTH, addressLabel, 160, SpringLayout.NORTH, panel);
         layout.putConstraint(SpringLayout.WEST, gpaLabel, 10, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, gpaLabel, 200, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.NORTH, gpaLabel, 260, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, specializationLabel, 10, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, specializationLabel, 290, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, hobbiesLabel, 10, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, hobbiesLabel, 310, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, sportsLabel, 10, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, sportsLabel, 340, SpringLayout.NORTH, panel);
 
         layout.putConstraint(SpringLayout.WEST, idField, 100, SpringLayout.WEST, panel);
         layout.putConstraint(SpringLayout.NORTH, idField, 10, SpringLayout.NORTH, panel);
-        layout.putConstraint(SpringLayout.WEST, nameField, 100, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, nameField, 40, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, firstNameField, 100, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, firstNameField, 40, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, lastNameField, 100, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, lastNameField, 70, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, contactField, 100, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, contactField, 100, SpringLayout.NORTH, panel);
         layout.putConstraint(SpringLayout.WEST, ageField, 100, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, ageField, 70, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.NORTH, ageField, 130, SpringLayout.NORTH, panel);
         layout.putConstraint(SpringLayout.WEST, jScrollPaneAddress, 100, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, jScrollPaneAddress, 100, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.NORTH, jScrollPaneAddress, 160, SpringLayout.NORTH, panel);
         layout.putConstraint(SpringLayout.WEST, gpaField, 100, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, gpaField, 200, SpringLayout.NORTH, panel);
-
+        layout.putConstraint(SpringLayout.NORTH, gpaField, 260, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, specializationField, 100, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, specializationField, 290, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, hobbiesField, 100, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, hobbiesField, 310, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, sportsField, 100, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, sportsField, 340, SpringLayout.NORTH, panel);
         layout.putConstraint(SpringLayout.WEST, jScrollPaneStudentTable, 300, SpringLayout.WEST, panel);
         layout.putConstraint(SpringLayout.NORTH, jScrollPaneStudentTable, 10, SpringLayout.NORTH, panel);
 
         layout.putConstraint(SpringLayout.WEST, addStudentBtn, 20, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, addStudentBtn, 240, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.NORTH, addStudentBtn, 400, SpringLayout.NORTH, panel);
         layout.putConstraint(SpringLayout.WEST, editStudentBtn, 60, SpringLayout.WEST, addStudentBtn);
-        layout.putConstraint(SpringLayout.NORTH, editStudentBtn, 240, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.NORTH, editStudentBtn, 400, SpringLayout.NORTH, panel);
         layout.putConstraint(SpringLayout.WEST, deleteStudentBtn, 60, SpringLayout.WEST, editStudentBtn);
 
-        layout.putConstraint(SpringLayout.NORTH, clearBtn, 240, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.NORTH, clearBtn, 400, SpringLayout.NORTH, panel);
         layout.putConstraint(SpringLayout.WEST, clearBtn, 80, SpringLayout.WEST, deleteStudentBtn);
 
-        layout.putConstraint(SpringLayout.NORTH, deleteStudentBtn, 240, SpringLayout.NORTH, panel);
-        layout.putConstraint(SpringLayout.WEST, sortStudentGPABtn, 300, SpringLayout.WEST, panel);
-        layout.putConstraint(SpringLayout.NORTH, sortStudentGPABtn, 330, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.NORTH, deleteStudentBtn, 400, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, sortStudentGPABtn, 500, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, sortStudentGPABtn, 400, SpringLayout.NORTH, panel);
         layout.putConstraint(SpringLayout.WEST, sortStudentNameBtn, 115, SpringLayout.WEST, sortStudentGPABtn);
-        layout.putConstraint(SpringLayout.NORTH, sortStudentNameBtn, 330, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.NORTH, sortStudentNameBtn, 400, SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, exitBtn, 290, SpringLayout.WEST, panel);
+        layout.putConstraint(SpringLayout.NORTH, exitBtn, 400, SpringLayout.NORTH, panel);
 
         this.add(panel);
         this.pack();
-        this.setTitle("Student Information");
-        this.setSize(800, 420);
+        this.setTitle("Student Registration");
+        this.setSize(1000, 620);
         // disable Edit and Delete buttons
         editStudentBtn.setEnabled(false);
         deleteStudentBtn.setEnabled(false);
@@ -177,10 +242,12 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         Object [][] students = new Object[size][5];
         for (int i = 0; i < size; i++) {
             students[i][0] = list.get(i).getId();
-            students[i][1] = list.get(i).getName();
-            students[i][2] = list.get(i).getAge();
-            students[i][3] = list.get(i).getAddress();
-            students[i][4] = list.get(i).getGpa();
+            students[i][1] = list.get(i).getFirName();
+            students[i][2] = list.get(i).getLastName();
+            students[i][3] = list.get(i).getContact();
+            students[i][4] = list.get(i).getAge();
+            students[i][5] = list.get(i).getAddress();
+            students[i][6] = list.get(i).getGpa();
         }
         studentTable.setModel(new DefaultTableModel(students, columnNames));
     }
@@ -194,10 +261,12 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         int row = studentTable.getSelectedRow();
         if (row >= 0) {
             idField.setText(studentTable.getModel().getValueAt(row, 0).toString());
-            nameField.setText(studentTable.getModel().getValueAt(row, 1).toString());
-            ageField.setText(studentTable.getModel().getValueAt(row, 2).toString());
-            addressTA.setText(studentTable.getModel().getValueAt(row, 3).toString());
-            gpaField.setText(studentTable.getModel().getValueAt(row, 4).toString());
+            firstNameField.setText(studentTable.getModel().getValueAt(row, 1).toString());
+            lastNameField.setText(studentTable.getModel().getValueAt(row, 2).toString());
+            contactField.setText(studentTable.getModel().getValueAt(row, 3).toString());
+            ageField.setText(studentTable.getModel().getValueAt(row, 4).toString());
+            addressTA.setText(studentTable.getModel().getValueAt(row, 5).toString());
+            gpaField.setText(studentTable.getModel().getValueAt(row, 6).toString());
             // enable Edit and Delete buttons
             editStudentBtn.setEnabled(true);
             deleteStudentBtn.setEnabled(true);
@@ -211,7 +280,9 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
      */
     public void clearStudentInfo() {
         idField.setText("");
-        nameField.setText("");
+        firstNameField.setText("");
+        lastNameField.setText("");
+        contactField.setText("");
         ageField.setText("");
         addressTA.setText("");
         gpaField.setText("");
@@ -229,7 +300,10 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
      */
     public void showStudent(Student student) {
         idField.setText("" + student.getId());
-        nameField.setText(student.getName());
+        firstNameField.setText(student.getFirName());
+        lastNameField.setText(student.getLastName());
+        contactField.setText(student.getContact());
+
         ageField.setText("" + student.getAge());
         addressTA.setText(student.getAddress());
         gpaField.setText("" + student.getGpa());
@@ -247,7 +321,7 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
      */
     public Student getStudentInfo() {
         // validate student
-        if (!validateName() || !validateAge() || !validateAddress() || !validateGPA()) {
+        if (!validateFirstName()||!validateLastName()||!validateContact() || !validateAge() || !validateAddress() || !validateGPA()) {
             return null;
         }
         try {
@@ -255,7 +329,9 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
             if (idField.getText() != null && !"".equals(idField.getText())) {
                 student.setId(Integer.parseInt(idField.getText()));
             }
-            student.setName(nameField.getText().trim());
+            student.setFirName(firstNameField.getText().trim());
+            student.setFirName(lastNameField.getText().trim());
+            student.setContact(contactField.getText().trim());
             student.setAge(Byte.parseByte(ageField.getText().trim()));
             student.setAddress(addressTA.getText().trim());
             student.setGpa(Float.parseFloat(gpaField.getText().trim()));
@@ -266,20 +342,40 @@ public class StudentView extends JFrame implements ActionListener, ListSelection
         return null;
     }
 
-    private boolean validateName() {
-        String name = nameField.getText();
+    private boolean validateFirstName() {
+        String name = firstNameField.getText();
         if (name == null || "".equals(name.trim())) {
-            nameField.requestFocus();
-            showMessage("Name không được trống.");
+            firstNameField.requestFocus();
+            showMessage("First Name không được trống.");
+            return false;
+        }
+        return true;
+    }
+    private boolean validateLastName() {
+        String name = lastNameField.getText();
+        if (name == null || "".equals(name.trim())) {
+            lastNameField.requestFocus();
+            showMessage("Last Name không được trống.");
             return false;
         }
         return true;
     }
 
+
     private boolean validateAddress() {
         String address = addressTA.getText();
         if (address == null || "".equals(address.trim())) {
             addressTA.requestFocus();
+            showMessage("Address không được trống.");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateContact() {
+        String address = contactField.getText();
+        if (address == null || "".equals(address.trim())) {
+            contactField.requestFocus();
             showMessage("Address không được trống.");
             return false;
         }

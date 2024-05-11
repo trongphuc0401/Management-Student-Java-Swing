@@ -2,23 +2,28 @@
 <students>
     <student>
         <id>1</id>
-        <name>Nguyễn Trọng Phúc</name>
         <age>12</age>
         <address>Gò Vấp</address>
         <gpa>3.6</gpa>
     </student>
     <student>
         <id>2</id>
-        <name>Lỗ Thành Văn</name>
         <age>16</age>
         <address>Quận 12</address>
         <gpa>3.7</gpa>
     </student>
     <student>
         <id>3</id>
-        <name>Nguyễn Thanh Hương</name>
         <age>15</age>
         <address>Quận 12</address>
         <gpa>3.8</gpa>
+    </student>
+    <student>
+        <id>4</id>
+        <FirName>Nguyen</FirName>
+        <contact>Phuc</contact>
+        <age>12</age>
+        <address>Go Vap</address>
+        <gpa>3.6</gpa>
     </student>
 </students>

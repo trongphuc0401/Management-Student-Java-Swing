@@ -7,8 +7,6 @@ S
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 7
 LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859
-g
-7src/main/java/org/example/view/RegistrationStudent.java,6\9\69a9d53fa2ba47d73806b80dfcdf289443de0102
 Z
 *src/main/java/org/example/entity/User.java,1\7\1776f7636d5efc84da1d29711989f49b294c2afb
 e

@@ -1,6 +1,6 @@
 
-”	java:S116"RRename this field "FirName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡Ó8”´†·ö1J$b4502bc0-a779-4e85-9590-ec64a57f8dc8
-š	java:S116"SRename this field "LastName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş‡àıÿÿÿÿ8”´†·ö1J$5999d244-61ac-4f8a-9d6a-dab42a727532
-„	java:S107#"BConstructor has 10 parameters, which is greater than 7 authorized.(şâñ£8¿ñİµö1J$bfddfeaf-dd32-4f12-889b-64076c971eb8
-†
-java:S1128">Remove this unused import 'org.example.utils.enums.MajorType'.(¡šºÚüÿÿÿÿ8Î—…¸ö1J$32e16c20-7b21-4f55-8759-07de0f322526
+”	java:S116"RRename this field "FirName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‡Ó8”´†·ö1J$05a37e01-fae1-416d-90cf-6d7966af3b1d
+š	java:S116"SRename this field "LastName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş‡àıÿÿÿÿ8”´†·ö1J$b833e224-842f-41f7-a9b5-17c06769a472
+„	java:S107#"BConstructor has 10 parameters, which is greater than 7 authorized.(şâñ£8¿ñİµö1J$74cbeceb-c6df-4aeb-bd10-5fdd90044c28
+`
+java:S1128">Remove this unused import 'org.example.utils.enums.MajorType'.(¡šºÚüÿÿÿÿ8åè¼û1
